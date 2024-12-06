@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Cá Nhân</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Trang Web Cá Nhân</h1>
+        <nav>
+            <ul>
+                <li><a onclick="showContent('introduction')">Giới Thiệu</a></li>
+                <li><a onclick="showContent('media')">Hình Ảnh & Video</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="introduction" class="content active">
+            <section class="introduction">
+                <div class="introduction-text">
+                    <h2>Giới Thiệu Bản Thân</h2>
+                    <p><strong>Họ Tên:</strong> Đoàn Ngọc Anh Duy</p>
+                    <p><strong>Giới Tính:</strong> Nam</p>
+                    <p><strong>Năm Sinh:</strong> 2007</p>
+                    <p><strong>Số Điện Thoại:</strong> 0903868686</p>
+                    <p><strong>Nơi Ở:</strong> Quảng Nam, Việt Nam</p>
+                    <p><strong>Học tại:</strong> THPT Lương Thúc Kì</p>
+                </div>
+                <div class="social-icons">
+                    <img src="image1.jpg" alt="Hình ảnh của tôi">
+                    <div class="social-row">
+                        <a href="https://www.facebook.com/Le.Van.Duy.Pr/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://t.me/duywin" target="_blank" title="LinkedIn"><i class="fab fa-telegram"></i></a>
+                        <a href="https://www.instagram.com/d" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="media" class="content">
+            <section class="gallery">
+                <img src="image2.jpg" alt="Hình 1">
+                <img src="image3.jpg" alt="Hình 2">
+                <img src="image4.jpg" alt="Hình 3">
+                <img src="image5.jpg" alt="Hình 4">
+            </section>
+            <section class="video-section">
+                <h2>Video</h2>
+                <video controls>
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Bản Quyền Thuộc Về ĐOÀN NGỌC ANH DUY</p>
+    </footer>
+
+    <script>
+        function showContent(sectionId) {
+            const sections = document.querySelectorAll('.content');
+            sections.forEach(section => section.classList.remove('active'));
+
+            const activeSection = document.getElementById(sectionId);
+            if (activeSection) activeSection.classList.add('active');
+        }
+    </script>
+</body>
+</html>
